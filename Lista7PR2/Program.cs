@@ -103,62 +103,102 @@ namespace Lista7PR2
                     }
                     break;
                 case 4:
-                    int Laço = 1;
-                    while (Laço != 0)
-                    {
-                        Console.Write("Digite o número do dia (1 a 31): ");
-                        int dia = int.Parse(Console.ReadLine());
-                        Console.Write("Digite o número do mês (1 a 12): ");
-                        int mes = int.Parse(Console.ReadLine());
+                   Console.Write("Informe a sigla de um estado: ");
+        string sigla = Console.ReadLine().ToUpper();
+        while (true)
 
-                        while (true)
-                        {
-                            if (mes < 1 || mes > 12)
-                            {
-                                Console.WriteLine("Mês inválido!");
-                                return;
-                            }
+        string nomeEstado;
 
-                            string estacao = "";
-                            if (mes == 12 || mes <= 2)
-                            {
-                                estacao = "Verão";
-                            }
-                            else if (mes >= 3 && mes <= 5)
-                            {
-                                estacao = "Outono";
-                            }
-                            else if (mes >= 6 && mes <= 8)
-                            {
-                                estacao = "Inverno";
-                            }
-                            else // mes >= 9 && mes <= 11
-                            {
-                                estacao = "Primavera";
-                            }
+        switch (sigla)
+        {
+            case "AC":
+                nomeEstado = "Acre";
+                break;
+            case "AL":
+                nomeEstado = "Alagoas";
+                break;
+            case "AP":
+                nomeEstado = "Amapá";
+                break;
+            case "AM":
+                nomeEstado = "Amazonas";
+                break;
+            case "BA":
+                nomeEstado = "Bahia";
+                break;
+            case "CE":
+                nomeEstado = "Ceará";
+                break;
+            case "DF":
+                nomeEstado = "Distrito Federal";
+                break;
+            case "ES":
+                nomeEstado = "Espírito Santo";
+                break;
+            case "GO":
+                nomeEstado = "Goiás";
+                break;
+            case "MA":
+                nomeEstado = "Maranhão";
+                break;
+            case "MT":
+                nomeEstado = "Mato Grosso";
+                break;
+            case "MS":
+                nomeEstado = "Mato Grosso do Sul";
+                break;
+            case "MG":
+                nomeEstado = "Minas Gerais";
+                break;
+            case "PA":
+                nomeEstado = "Pará";
+                break;
+            case "PB":
+                nomeEstado = "Paraíba";
+                break;
+            case "PR":
+                nomeEstado = "Paraná";
+                break;
+            case "PE":
+                nomeEstado = "Pernambuco";
+                break;
+            case "PI":
+                nomeEstado = "Piauí";
+                break;
+            case "RJ":
+                nomeEstado = "Rio de Janeiro";
+                break;
+            case "RN":
+                nomeEstado = "Rio Grande do Norte";
+                break;
+            case "RS":
+                nomeEstado = "Rio Grande do Sul";
+                break;
+            case "RO":
+                nomeEstado = "Rondônia";
+                break;
+            case "RR":
+                nomeEstado = "Roraima";
+                break;
+            case "SC":
+                nomeEstado = "Santa Catarina";
+                break;
+            case "SP":
+                nomeEstado = "São Paulo";
+                break;
+            case "SE":
+                nomeEstado = "Sergipe";
+                break;
+            case "TO":
+                nomeEstado = "Tocantins";
+                break;
+            default:
+                nomeEstado = "Sigla de estado inválida";
+                break;
+        }
 
-                            if ((mes == 3 && dia >= 20) || mes == 4 || mes == 5 && dia <= 20)
-                            {
-                                Console.WriteLine("O mês ", mes, " de 2023 é de transição entre Outono e Inverno.");
-                            }
-                            else if ((mes == 6 && dia >= 21) || mes == 7 || mes == 8 && dia <= 22)
-                            {
-                                Console.WriteLine("O mês ", mes, " de 2023 é de transição entre Inverno e Primavera.");
-                            }
-                            else if ((mes == 9 && dia >= 23) || mes == 10 || mes == 11 && dia <= 20)
-                            {
-                                Console.WriteLine("O mês ", mes, " de 2023 é de transição entre Primavera e Verão.");
-                            }
-                            else if ((mes == 12 && dia >= 21) || mes == 1 || mes == 2 && dia <= 18)
-                            {
-                                Console.WriteLine("O mês ", mes, " de 2023 é de transição entre Verão e Outono.");
-                            }
-                            else
-                            {
-                                Console.WriteLine("O mês ", mes, " de 2023 é de ", estacao, ".");
-                            }
-                        }
-                    }
+        Console.WriteLine(nomeEstado);
+        
                     break;
                 case 5:
                     int Laço1 = 1;
